@@ -43,7 +43,7 @@ public class MovieController {
 	@RequestMapping("/object") // add movies o the database we can check the data on the brouwser using localhost:8080/movie-api/v1/object to see the data that we fetch from the movie api
 	public List<Movies> httpConnection () {
 		
-		int pageNumber= 1; // there 500 page each page return 20 movies we are using 100 movies so we load 1-5 page 
+		int pageNumber= 1; // there 500 page each page return 20 movies we are using 100 movies so we load 1-5 page (just change the number 1 to 2 for example and save. )
 		
 		HttpClient client   = HttpClient.newHttpClient(); //this method is esponsible for fetching the data
 		HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://api.themoviedb.org/3/movie/popular?api_key=f83efc3c1b5e1e80a321f365d98b068b&language=en-US&page="+pageNumber)).build();
